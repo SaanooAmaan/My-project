@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sano Aman | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0b1220, #0f172a);
+      color: #e5e7eb;
+      overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 15px 20px;
+      text-align: center;
+      animation: slideDown 1s ease;
+    }
+
+    header h1 {
+      color: #38bdf8;
+      margin-bottom: 5px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: #e5e7eb;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* SECTIONS */
+    .section {
+      background: rgba(17, 24, 39, 0.9);
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.1);
+      transform: translateY(30px);
+      opacity: 0;
+      animation: fadeUp 1s forwards;
+    }
+
+    h2 {
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    p, li {
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      background: linear-gradient(45deg, #38bdf8, #6366f1);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #38bdf8;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border: none;
+      background: #0f172a;
+      color: white;
+      outline: none;
+    }
+
+    button {
+      background: #22c55e;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #16a34a;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0f172a;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 30px;
+      color: #94a3b8;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Sano Aman</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <p>Web Developer & IT Teacher</p>
+</header>
+
+<div class="container">
+
+  <div class="section" id="about">
+    <h2>About Me</h2>
+    <p>I am Sano Aman, a software engineer and teacher. I create modern websites, teach programming, and provide IT solutions for students and businesses in Ethiopia.</p>
+  </div>
+
+  <div class="section" id="services">
+    <h2>Services & Prices</h2>
+    <ul>
+      <li>Website Design - From 1500 ETB</li>
+      <li>CV / Resume Writing - 500 ETB</li>
+      <li>IT Tutoring - 300 ETB/hour</li>
+      <li>Bug Fix / Software Help - Negotiable</li>
+    </ul>
+  </div>
+
+  <div class="section" id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>Portfolio Website Design</li>
+      <li>School Management System (Demo)</li>
+      <li>Business Landing Page</li>
+      <li>Student Result System</li>
+    </ul>
+  </div>
+
+  <div class="section" id="testimonials">
+    <h2>Testimonials</h2>
+    <p>"Very good developer and fast delivery" - Client A</p>
+    <p>"Excellent IT tutor, easy to understand" - Student B</p>
+  </div>
+
+  <div class="section" id="contact">
+    <h2>Contact & Order Service</h2>
+
+    <form>
+      <label>Name</label>
+      <input type="text" name="name" required />
+
+      <label>Service Needed</label>
+      <input type="text" name="service" required />
+
+      <label>Message</label>
+      <textarea name="message" rows="4"></textarea>
+
+      <button type="submit">Send Request</button>
+    </form>
+
+    <p><strong>Phone:</strong> +251920885179</p>
+    <p><strong>Email:</strong> sineby3@gmail.com</p>
+    <p><strong>Payment:</strong> Telebirr / CBE Birr / CBE Account 1000297043858</p>
+    <a class="btn" href="https://wa.me/251920885179" target="_blank">WhatsApp Me</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Sano Aman | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
